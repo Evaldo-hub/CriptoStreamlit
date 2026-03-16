@@ -6,7 +6,20 @@ import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import ta # Technical Analysis Library: pip install ta
 
-# Configuração da Página
+import os
+import streamlit as st
+
+# Configuração para Render
+if os.getenv("RENDER"):
+    auto_start = True
+else:
+    auto_start = True  # também inicia local
+
+# Inicialização do Session State
+if "analise_iniciada" not in st.session_state:
+    st.session_state.analise_iniciada = auto_start
+
+# Configuração da página
 st.set_page_config(
     page_title="Crypto Quant Scanner v4.2",
     page_icon="🤖",
