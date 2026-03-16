@@ -1,1 +1,9 @@
-streamlit
+streamlit==1.32.2
+pandas==2.2.3
+numpy==1.26.4
+ccxt==4.2.49
+plotly==5.19.0
+ta==0.11.0
+requests==2.31.0
+flask==3.0.3
+werkzeug==3.0.3
